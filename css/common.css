@@ -159,6 +159,9 @@ template {
   padding: 0;
   margin: 0;
 }
+*,*::before,*::after {
+    box-sizing: border-box;
+}
 html {
   font-size: 10px;
 }
@@ -197,4 +200,29 @@ legend,
     border: 0;
     padding: 0;
     background: transparent;
-  }
+}
+/* 공통 레이아웃 */
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+.appFooter {
+    width: 100%;
+}
+/* 공통 헤더 */
+.appHeader {
+    background-color: silver;
+}
+/* 공통 내비게이션 */
+.appNavigation {
+    background-color: purple;
+    
+}
+/* 공통 메인 콘텐츠 */
+.appMain {
+    background-color: lime;
+}
+/* 공통 푸터 */
+.appFooter {
+    background-color: orange;
+}

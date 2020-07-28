@@ -1,0 +1,31 @@
+/* 모바일 기본 글자 크기 */
+body {
+    font-size: 1.5rem;
+    background-color: pink;
+}
+/* 모바일 레이아웃 */
+.appHeader, .appMain {
+    width: 100%;
+}
+/* 모바일 헤더 */
+.appHeader {
+    background-color: silver;
+}
+/* 모바일 내비게이션 */
+.appNavigation {
+    background-color: purple;
+    position: fixed; /*뷰포트 기준으로 */
+    top: 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    transform: translateX(-100%);/*음수값은 왼쪽으로 빠져나감. 0을 주거나 입력하지 않으면 원래상태로 돌릴 수 있음.*/
+}
+/* 모바일 메인 콘텐츠 */
+.appMain {
+    background-color: lime;
+}
+/* 모바일 푸터 */
+.appFooter {
+    background-color: orange;
+}
