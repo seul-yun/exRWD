@@ -1,6 +1,5 @@
 /* 데스크탑 기본 글자 크기 */
 body {
-    background-color: yellow;
     font-size: 1.4rem;
 }
 /* 데스크탑 레이아웃 */
@@ -29,6 +28,17 @@ body {
 /* 데스크탑 검색폼 */
 .searchForm{
     grid-area : 2/2/3/3;
-    text-align: right;
-    background-color: lime;
+    /* text-align: right; */
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap : 10px;
+}
+.searchForm fieldset {
+    display: contents;   
+}
+.buttonSearch {
+    background-color: #988574;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 10px;
 }

@@ -211,7 +211,6 @@ legend,
 }
 /* 공통 헤더 */
 .appHeader {
-    background-color: silver;
     display: grid;
 }
 /* 공통 멤버링크 */
@@ -220,10 +219,19 @@ legend,
     flex-flow: row nowrap;
     justify-content: flex-end;
 }
+.memberOnly .divider {
+  margin: 0 5px;
+}
+/* 공통 검색폼 */
+input[type="search"] {
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
+  padding: 1px 5px;
+  height: 35px;
+}
 /* 공통 내비게이션 */
 .appNavigation {
     background-color: purple;
-    
 }
 /* 공통 메인 콘텐츠 */
 .appMain {

@@ -1,7 +1,6 @@
 /* 모바일 기본 글자 크기 */
 body {
     font-size: 1.5rem;
-    background-color: pink;
 }
 /* 모바일 레이아웃 */
 .appHeader, .appMain {
@@ -29,10 +28,6 @@ body {
 }
 /* 모바일 검색 폼 */
 input[type="search"] {
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    padding: 2px 5px;
-    height: 35px;
     width: calc(100% - 45px);
     margin-right: 5px;
 }
@@ -41,11 +36,25 @@ input[type="search"] {
     height: 35px;
     border: 0;
     padding: 0;
+    background-color: transparent;/*버튼 자체 배경색도 없애줘야함*/
+    /* background-image: url(./images/btn_search.png);
+    background-size: 35px 35px;
+    border-radius: 50%;
+    text-indent: -9999px; */
+    position: relative;
+}
+.buttonSearch::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url(./images/btn_search.png) 0 0 / cover no-repeat scroll;
 }
 
 /* 모바일 내비게이션 */
 .appNavigation {
-    background-color: purple;
     position: fixed; /*뷰포트 기준으로 */
     top: 0;
     left: 0;
@@ -55,9 +64,8 @@ input[type="search"] {
 }
 /* 모바일 메인 콘텐츠 */
 .appMain {
-    background-color: lime;
 }
 /* 모바일 푸터 */
 .appFooter {
-    background-color: orange;
+
 }
