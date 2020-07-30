@@ -266,6 +266,11 @@ legend,
     padding: 0;
     background: transparent;
 }
+/* 공통 반응형 콘텐츠 */
+.responsive{
+  height: auto; /*필수. 파이어폭스에서 버그가 발생할 수 있음.*/
+  max-width: 100%;
+}
 /* 공통 레이아웃 */
 .container {
     display: flex;
@@ -300,9 +305,86 @@ input[type="search"] {
 }
 /* 공통 메인 콘텐츠 */
 .appMain {
-    background-color: lime;
+  
+}
+/* 공통 메인 콘텐츠 섹션 제목, 단락 */
+.appMain [class*="__title"] {
+  margin: 0;
+  font-size: 1.6rem;
+}
+.appMain [class*="__enTitle"] {
+  display: block;
+  margin-top: 5px;
+}
+.sprite {
+  background-image: url(./images/sprite_main.png);
+  background-repeat: no-repeat;
+  min-height: 60px;
+  padding-left: 65px;
+}
+.spriteBook {
+  background-position: 0 0;
+}
+.spriteNews {
+  background-position: 0 -230px;
+}
+.spriteBoard {
+  background-position: 0 -115px;
+}
+.spriteFavorite{
+  background-position: 0 -345px;
+}
+.spriteTwitter {
+  background-position: 0 -460px;
+}
+.themeGreen {
+  color: #abd375;
+}
+.themeYellow {
+  color: #e8ca58;
+}
+.themeBrown {
+  color: #c7b39a;
+}
+.themeSkyblue {
+  color: #6aaee6;
+}
+.themeOrange {
+  color: #eea60a;
+}
+.appMain [class*-"__summary"]{
+  line-height: 1.5;
+}
+/* 공통 추천서적 */
+.book {
+}
+.book__cover {
+  text-align: center;
+  margin: 15px 20px;
+  text-align: center;
+}
+.book__cover figcaption{
+  margin: 10px 0;
+}
+.book__info {
+  text-align: center;
+  margin: 15px 0;
+}
+.book__info *{
+  display: inline;
+}
+.book__info dt {
+}
+.book__info dd {
+  margin-left: 0;
+}
+.book__info dd[aria-label]{  /*span으로 하면 안되낭*/
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 /* 공통 푸터 */
+
 .appFooter {
     background-color: orange;
 }
