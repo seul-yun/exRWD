@@ -94,7 +94,6 @@ input[type="search"] {
     top: 100%;/*애니메이션 시킬거라 0으로 안줌*/
     transform: translateY(-100%);/*시작하는게 100부터니까...*/
 }
-
 .isAct .positionTop{
     top: 50%;
     transform: translateY(-50%) rotate(45deg);/*탑이랑 y좌표를 맞춰서 미들값이랑 동일하게해서 중심축기준으로 변화하도록*/
@@ -106,14 +105,49 @@ input[type="search"] {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
 }
+.menuAct {
 
+}
 .menu__list {
-    position: fixed; /*뷰포트 기준으로 */
+    position: fixed; /*뷰포트 기준으로*/
     top: 0;
     left: 0;
     width: 70vw;
     height: 100vh;
-    transform: translateX(-100%);/*음수값은 왼쪽으로 빠져나감. 0을 주거나 입력하지 않으면 원래상태로 돌릴 수 있음.*/
+    transform: translateX(-105%);/*음수값은 왼쪽으로 빠져나감. 0을 주거나 입력하지 않으면 원래상태로 돌릴 수 있음.*/
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+    padding: 20px;
+}
+.menu__item {
+    /* display: flex;
+    flex-flow: row wrap; */
+}
+.menu__link {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 20px;/*마진병합이 일어나서 20px로. 패딩줄수도 있음 */
+    display: inline-block;
+    width: calc(100% - 1.5em);
+}
+.menu__subMenu{
+    font-size: 1.6rem;
+    display: none;
+    width: 100%;
+}
+.menu__subMenu li{
+    margin: 10px;
+}
+.menu__subMenu a{
+    display: block;
+    padding: 5px 0;
+}
+.menuAct .menu__subMenu{
+    display: block; /*메뉴액트 작동시 블록으로 재정의*/
+}
+.isAct .menu__list{
+    transform:none;
 }
 /* 모바일 메인 콘텐츠 */
 .appMain {
