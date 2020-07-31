@@ -352,12 +352,10 @@ input[type="search"] {
 .themeOrange {
   color: #eea60a;
 }
-.appMain [class*-"__summary"]{
+.appMain [class*="__summary"]{
   line-height: 1.5;
 }
 /* 공통 추천서적 */
-.book {
-}
 .book__cover {
   text-align: center;
   margin: 15px 20px;
@@ -383,6 +381,45 @@ input[type="search"] {
   font-size: 2.5rem;
   font-weight: 700;
 }
+
+/* 공통 새소식 */
+video.responsive {
+  width: 100%;
+}/*reponsive 맥스위드 재정의*/
+
+.news {
+  background-color: pink;
+}
+.news__videoContainer {
+  margin: 15px 20px;
+}
+.news__date {
+  display: block;
+  text-align: right;
+  margin: 1em 0;
+}
+/* 공통 새소식 iframe */
+.iframeContainer {
+  position: relative;
+  height: 0;
+}
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.iframe4To3 {
+  padding-top: 75%;
+}
+.iframe16To9 {
+  padding-top: 56.25%;
+}
+.iframe21To9 {
+  padding-top: 42.857142857142855%;
+}
+
 /* 공통 푸터 */
 
 .appFooter {
