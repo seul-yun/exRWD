@@ -7,7 +7,8 @@ body {
     justify-content: center;
 }
 .appHeader, .appMain, .menu__list {
-    width: 1000px;
+    width: 78.125%;
+
 }
 .appNavigation {
     width: 100%;
@@ -96,7 +97,6 @@ body {
 /* 데스크탑 게시판 */
 .board {
     grid-area: 2/1/3/span 4;
-
 }
 /* 데스크탑 트위터 */
 .twitter {
