@@ -113,3 +113,7 @@ body {
 .favorite__list a:focus::before {
   right: -10px;
 }
+/* 데스크탑 푸터 */
+.appFooter {
+    text-align: center;
+}
