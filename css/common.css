@@ -311,6 +311,7 @@ input[type="search"] {
 .appMain [class*="__title"] {
   margin: 0;
   font-size: 1.6rem;
+  padding-top: 10px;
 }
 .appMain [class*="__enTitle"] {
   display: block;
@@ -388,7 +389,6 @@ video.responsive {
 }/*reponsive 맥스위드 재정의*/
 
 .news {
-  background-color: pink;
 }
 .news__videoContainer {
   margin: 15px 20px;
@@ -419,7 +419,87 @@ video.responsive {
 .iframe21To9 {
   padding-top: 42.857142857142855%;
 }
+/* 공통 게시판 */
+.board {
+  position: relative;
+  overflow: hidden;
+}
+.board__list {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+.board__list li{
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 10px 0;
+}
+.board__list a{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  /* width: calc(100% - 120px); */
+  margin: 0 10px 0 5px;
+}
+.board__more{
+  position: absolute;
+  padding: 10px;
+  top: -10px;
+  right: -10px;
+}
+/* 공통 인기사이트 */
+.favorite__list {
+  margin: 15px 0;
+  padding-left: 20px;
+}
 
+.favorite__list li{
+  counter-increment: number;
+  align-items: center;
+  margin: 10px 0;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.favorite__list li::before {
+  content: counter(number);
+  color: #fff;
+  background-color: #eea60a;
+  padding: 2px 6px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.favorite__list a{
+  position: relative;
+  flex-grow: 1;
+}
+.favorite__list a:hover::before,
+.favorite__list a:focus::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 1em; /*한글자만큼 내려오기*/
+  background-color: #eea60a;
+  border: 1px solid #aaa;
+  box-shadow: 2px 2px 0 0 #000;
+  padding: 10px;
+  color: #fff;
+  z-index: 100;
+  border-radius: 5px;
+  
+} 
+/* [data-tooltip]:hover:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  width: 100%;
+  top: 80%;
+  left: 50%;
+  background-color: orange;
+  box-shadow: 3px 3px #333;
+  border: 1px solid #333;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.7rem;
+  padding: 10px;
+}
 /* 공통 푸터 */
 
 .appFooter {
